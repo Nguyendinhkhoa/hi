@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  color: var(--ltn__paragraph-color);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #0a9a73;
+}
+
+body {
+    color: #5C727D;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+ul li,
+ol li {
+    margin-top: 1rem;
+}
+.section-bg-1 {
+  background-color: #F2F6F7;
+}
+.MuiDialogContent-root:first-child {
+ padding-top: 5px!important; 
+}
