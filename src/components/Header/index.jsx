@@ -16,6 +16,7 @@ import { logout } from '../../features/Auth/userSlice';
 import { unwrapResult } from '@reduxjs/toolkit';
 import { searchProduct } from './SearchSlice';
 import { useSnackbar } from 'notistack';
+import MobileMenu from "./MobileMenu";
 
 const MODE = {
   LOGIN: 'Login',
@@ -150,7 +151,7 @@ function Header(props) {
         <div className="ltn__header-top-area border-bottom">
           <div className="container">
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-md-7">
                 <div className="ltn__top-bar-menu">
                   <ul>
                     <li>
@@ -166,8 +167,8 @@ function Header(props) {
                   </ul>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="top-bar-right text-right text-end">
+              <div className="col-md-5">
+                <div className="top-bar-right text-right text-login ">
                   <div className="ltn__top-bar-menu">
                     <ul>
                       <li>
@@ -253,13 +254,14 @@ function Header(props) {
                       <div className="header-search-wrap">
                         <div className="header-search-1">
                           <div className="search-icon">
-                            <i className="fas fa-search for-search-show"></i>
-                            <i className="icon-cancel  for-search-close" />
+                            <i className="fas fa-search for-search-show icon-search"></i>
+                           
+                            <i className="fas fa-times icon-close for-search-close" />
                           </div>
                         </div>
                         <div className="header-search-1-form">
-                          <form id="#" method="get" action="#">
-                            <input type="text" name="search" placeholder="Search here..." />
+                          <form onSubmit={handleSubmit}>
+                            <input  onChange={handleSearchInput} type="text" name="search" placeholder="Search here..." />
                             <button type="submit">
                               <span>
                                 <i className="fas fa-search"></i>
@@ -339,6 +341,7 @@ function Header(props) {
         </div>
       </header>
       {/* <MobileMenu/> */}
+      <MobileMenu/>
     </>
   );
 }
